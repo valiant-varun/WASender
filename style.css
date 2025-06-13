@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+* {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+.plus-jakarta-sans {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.plus-jakarta-navitems {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.custom-nav-font {
+  font-size: 0.9rem; /* Try 16px, 18px, or 1.5rem */
+}
+
+.custom-light-green {
+  color: #ffffff; /* White text */
+  border: none; /* No border */
+  font-size: 0.8rem; /* Adjusted font size to match the image */
+  padding-top: 0.4rem;
+  padding-left: 0.9rem;
+  padding-right: 0.9rem;
+  font-weight: 500; /* Added font weight to match the image */
+
+  border-radius: 5px; /* Added border-radius for rounded corners */
+
+  background: linear-gradient(
+    to bottom,
+    #4caf50,
+    /* A brighter green for the top part of the gradient, closer to the image */
+      #2e8b57 /* A slightly darker green for the bottom part */
+  );
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adjusted shadow for more prominence */
+  transition: all 0.2s ease-in-out;
+}
+
+.custom-light-green:hover {
+  background-color: #76d476; /* Slightly darker on hover */
+  color: #ffffff;
+}
+
+.custom-book-demo {
+  background-color: #f8f8f8;
+  color: #019f53;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 600;
+  padding-left: 0.9rem;
+  padding-right: 0.9rem;
+  margin-left: 0.6rem;
+  margin-right: 0.6rem;
+
+  box-shadow: 0 4px 8px rgba(123, 123, 123, 0.2); /* Adjusted shadow for more prominence */
+  transition: all 0.2s ease-in-out;
+}
+
+.custom-grey {
+  color: #9b9c9c; /* or any hex/RGB/hsl */
+}
+
+.semi-bold {
+  font-weight: 500;
+}
+
+.hero-features li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.custom-checkbox {
+  display: inline-flex; /* Use flex to center the checkmark */
+  justify-content: center;
+  align-items: center;
+  width: 18px; /* Adjust size as needed */
+  height: 18px; /* Adjust size as needed */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 3px; /* Optional: slight rounded corners */
+  background-color: #f8f8f8; /* Light background */
+  color: #333; /* Color of the checkmark */
+  font-size: 14px; /* Adjust checkmark size */
+}
+
+.custom-checkbox i {
+  font-size: 1rem; /* Adjust the size of the checkmark icon */
+}
+
+.hero-features i.bi-check-circle-fill {
+  /* Remove or comment out the old style */
+  /* color: #28a745; */
+  /* font-size: 1.2rem; */
+  /* margin-right: 8px; */
+  display: none; /* Hide the old circular icon */
+}
+
+.margin-4rem {
+  margin-bottom: 5rem;
+}
+
+.hero-image {
+  max-width: 95%; /* or any percentage or fixed width like 300px */
+  height: auto; /* keep aspect ratio */
+}
