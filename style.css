@@ -1,0 +1,438 @@
+<<<<<<< HEAD
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+* {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+.plus-jakarta-sans {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.plus-jakarta-navitems {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.custom-nav-font {
+  font-size: 0.9rem; /* Try 16px, 18px, or 1.5rem */
+}
+
+.custom-light-green {
+  color: #ffffff; /* White text */
+  border: none; /* No border */
+  font-size: 0.8rem; /* Adjusted font size to match the image */
+  padding-top: 0.4rem;
+  padding-left: 0.9rem;
+  padding-right: 0.9rem;
+  font-weight: 500; /* Added font weight to match the image */
+
+  border-radius: 5px; /* Added border-radius for rounded corners */
+
+  background: linear-gradient(
+    to bottom,
+    #4caf50,
+    /* A brighter green for the top part of the gradient, closer to the image */
+      #2e8b57 /* A slightly darker green for the bottom part */
+  );
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adjusted shadow for more prominence */
+  transition: all 0.2s ease-in-out;
+}
+
+.custom-light-green:hover {
+  background-color: #76d476; /* Slightly darker on hover */
+  color: #ffffff;
+}
+
+.custom-book-demo {
+  background-color: #f8f8f8;
+  color: #019f53;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 600;
+  padding-left: 0.9rem;
+  padding-right: 0.9rem;
+  margin-left: 0.6rem;
+  margin-right: 0.6rem;
+
+  box-shadow: 0 4px 8px rgba(123, 123, 123, 0.2); /* Adjusted shadow for more prominence */
+  transition: all 0.2s ease-in-out;
+}
+
+.custom-grey {
+  color: #9b9c9c; /* or any hex/RGB/hsl */
+}
+
+.semi-bold {
+  font-weight: 500;
+}
+
+.hero-features li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.custom-checkbox {
+  display: inline-flex; /* Use flex to center the checkmark */
+  justify-content: center;
+  align-items: center;
+  width: 18px; /* Adjust size as needed */
+  height: 18px; /* Adjust size as needed */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 3px; /* Optional: slight rounded corners */
+  background-color: #f8f8f8; /* Light background */
+  color: #333; /* Color of the checkmark */
+  font-size: 14px; /* Adjust checkmark size */
+}
+
+.custom-checkbox i {
+  font-size: 1rem; /* Adjust the size of the checkmark icon */
+}
+
+.hero-features i.bi-check-circle-fill {
+  /* Remove or comment out the old style */
+  /* color: #28a745; */
+  /* font-size: 1.2rem; */
+  /* margin-right: 8px; */
+  display: none; /* Hide the old circular icon */
+}
+
+.margin-4rem {
+  margin-bottom: 5rem;
+}
+
+.hero-image {
+  max-width: 95%; /* or any percentage or fixed width like 300px */
+  height: auto; /* keep aspect ratio */
+}
+
+/* Add to your existing CSS or a new style block */
+
+.hero-title {
+  /* Existing styles you have */
+  line-height: 1.3;
+  /* ... other styles like font-size, color, etc. */
+
+  /* Animation properties */
+  opacity: 0; /* Start invisible */
+  transform: translateX(-100%); /* Start off-screen to the left */
+  animation: slideInFromLeft 1s ease-out forwards; /* Apply the animation */
+  /* Add a delay if you want it to appear after other elements */
+  animation-delay: 0.3s; /* Example: starts 0.3 seconds after page load */
+}
+
+/* Define the keyframe animation */
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%); /* Fully off-screen left */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* Back to its original position */
+  }
+}
+
+/* Add this to your stylesheet */
+
+/* Styling for the blinking cursor */
+.typed-cursor {
+  display: inline-block; /* Essential for cursor to show */
+  width: 2px; /* Width of your cursor */
+  height: 1em; /* Height of your cursor, approximately font-size */
+  background-color: #333; /* Color of your cursor */
+  animation: blink 0.7s infinite;
+  vertical-align: middle; /* Align cursor nicely with text */
+  margin-left: 2px; /* Small space from text */
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Optional: If you want the whole paragraph to be hidden before typing starts */
+.hero-subtitle {
+  /* Ensure the text doesn't wrap oddly during typing */
+  /* This might be tricky with <br>, so we'll rely on JS for line breaks */
+  min-height: 2em; /* Adjust to ensure enough vertical space for content */
+  /* You might want to hide the initial paragraph entirely if it's part of an animated sequence */
+  /* If you animate the entire <p> to slide in (like the h1), then you don't need initial opacity:0 here */
+}
+
+/* Add these styles to your stylesheet */
+
+.navbar-brand {
+  /* Ensure it's inline-block or block to allow transform animations */
+  display: inline-block;
+  /* Optional: To make sure it doesn't get cut off during the bounce */
+  position: relative;
+  z-index: 10; /* Ensure it stays above other elements if needed */
+
+  /* Apply the animation */
+  animation: bounceAndSettle 1.5s ease-out forwards; /* Adjust duration as needed */
+  animation-delay: 0.2s; /* Optional: Delay before it starts, if other things are animating */
+}
+
+/* Define the keyframe animation */
+@keyframes bounceAndSettle {
+  0% {
+    transform: translateY(-500px); /* Start very high above its position */
+    animation-timing-function: ease-in; /* Accelerate downwards */
+    opacity: 0; /* Start invisible */
+  }
+  25% {
+    transform: translateY(0); /* Hits the ground */
+    animation-timing-function: ease-out; /* Decelerate on impact */
+    opacity: 1; /* Fully visible */
+  }
+  40% {
+    transform: translateY(
+      -30px
+    ); /* Bounces up slightly (first smaller bounce) */
+    animation-timing-function: ease-in;
+  }
+  55% {
+    transform: translateY(0); /* Hits the ground again */
+    animation-timing-function: ease-out;
+  }
+  65% {
+    transform: translateY(
+      -10px
+    ); /* Bounces up even less (second smaller bounce) */
+    animation-timing-function: ease-in;
+  }
+  75% {
+    transform: translateY(0); /* Hits the ground gently */
+    animation-timing-function: ease-out;
+  }
+  80% {
+    transform: translateY(-3px); /* Smallest bounce */
+    animation-timing-function: ease-in;
+  }
+  90% {
+    transform: translateY(0); /* Final settle */
+    animation-timing-function: ease-out;
+  }
+  100% {
+    transform: translateY(0); /* Stays at rest */
+    opacity: 1;
+  }
+}
+/* Add these styles to your existing CSS or a new style block */
+
+.hero-image {
+  /* Existing styles you might have */
+  max-width: 100%; /* Ensures it's responsive */
+  height: auto;
+  display: block; /* Important for transform animations */
+
+  /* Animation properties */
+  opacity: 0; /* Start invisible */
+  transform: translateX(100%); /* Start off-screen to the right */
+  animation: slideInFromRight 1s ease-out forwards; /* Apply the animation */
+  /* Adjust delay to align with h1. If h1 starts at 0.3s and takes 1s,
+       this could start at 0.3s or slightly after, maybe 0.4s or 0.5s for a staggered effect. */
+  animation-delay: 0.5s; /* Example: Starts slightly after the h1 */
+}
+
+/* Define the keyframe animation */
+@keyframes slideInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%); /* Fully off-screen right */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* Back to its original position */
+  }
+}
+
+/* In your CSS file */
+
+/* Your existing button styles */
+
+/* Add these new styles */
+
+/* Basic container for the scrolling text */
+.scroll-text-button {
+  position: relative; /* Needed for absolute positioning of wrapper */
+  overflow: hidden; /* Hides the text that's not in view */
+  white-space: nowrap; /* Prevents text from wrapping inside the spans */
+  /* Ensure padding is consistent for the button */
+  padding: 0; /* Remove default button padding, we'll apply it to the wrapper */
+  display: inline-flex; /* Use flexbox to center content */
+  align-items: center; /* Vertically center content */
+  justify-content: center; /* Horizontally center content */
+  min-width: 150px; /* Adjust as needed to fit your text plus padding */
+  height: 48px; /* Or whatever fixed height your buttons usually have */
+}
+
+.button-text-wrapper {
+  display: flex; /* Arrange original and new text vertically */
+  flex-direction: column;
+  transition: transform 0.3s ease-out; /* Smooth transition for the scroll */
+  /* Apply button's original padding here instead of on the button itself */
+  padding: 10px 20px; /* Example padding, adjust to match your button's usual look */
+}
+
+.button-text {
+  display: block; /* Ensure each text span takes its own line within the flex column */
+  /* Inherit button's font styles */
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  line-height: inherit; /* Important for vertical alignment */
+}
+
+/* Hover effect */
+.scroll-text-button:hover .button-text-wrapper {
+  transform: translateY(
+    -100%
+  ); /* Slides the wrapper up by 100% of its height */
+}
+
+/* ---------------------------------------------------- */
+/* For the attention-grabbing pulse animation: */
+/* Make sure these classes are still present and correct */
+
+@keyframes pulseButton {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(66, 203, 114, 0.7);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* This is the class that will trigger the pulse animation */
+.btn-success.custom-light-green.pulsing-active {
+  animation: pulseButton 2s ease-in-out forwards;
+}
+=======
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+* {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+.plus-jakarta-sans {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.plus-jakarta-navitems {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.custom-nav-font {
+  font-size: 0.9rem; /* Try 16px, 18px, or 1.5rem */
+}
+
+.custom-light-green {
+  color: #ffffff; /* White text */
+  border: none; /* No border */
+  font-size: 0.8rem; /* Adjusted font size to match the image */
+  padding-top: 0.4rem;
+  padding-left: 0.9rem;
+  padding-right: 0.9rem;
+  font-weight: 500; /* Added font weight to match the image */
+
+  border-radius: 5px; /* Added border-radius for rounded corners */
+
+  background: linear-gradient(
+    to bottom,
+    #4caf50,
+    /* A brighter green for the top part of the gradient, closer to the image */
+      #2e8b57 /* A slightly darker green for the bottom part */
+  );
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adjusted shadow for more prominence */
+  transition: all 0.2s ease-in-out;
+}
+
+.custom-light-green:hover {
+  background-color: #76d476; /* Slightly darker on hover */
+  color: #ffffff;
+}
+
+.custom-book-demo {
+  background-color: #f8f8f8;
+  color: #019f53;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 600;
+  padding-left: 0.9rem;
+  padding-right: 0.9rem;
+  margin-left: 0.6rem;
+  margin-right: 0.6rem;
+
+  box-shadow: 0 4px 8px rgba(123, 123, 123, 0.2); /* Adjusted shadow for more prominence */
+  transition: all 0.2s ease-in-out;
+}
+
+.custom-grey {
+  color: #9b9c9c; /* or any hex/RGB/hsl */
+}
+
+.semi-bold {
+  font-weight: 500;
+}
+
+.hero-features li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.custom-checkbox {
+  display: inline-flex; /* Use flex to center the checkmark */
+  justify-content: center;
+  align-items: center;
+  width: 18px; /* Adjust size as needed */
+  height: 18px; /* Adjust size as needed */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 3px; /* Optional: slight rounded corners */
+  background-color: #f8f8f8; /* Light background */
+  color: #333; /* Color of the checkmark */
+  font-size: 14px; /* Adjust checkmark size */
+}
+
+.custom-checkbox i {
+  font-size: 1rem; /* Adjust the size of the checkmark icon */
+}
+
+.hero-features i.bi-check-circle-fill {
+  /* Remove or comment out the old style */
+  /* color: #28a745; */
+  /* font-size: 1.2rem; */
+  /* margin-right: 8px; */
+  display: none; /* Hide the old circular icon */
+}
+
+.margin-4rem {
+  margin-bottom: 5rem;
+}
+
+.hero-image {
+  max-width: 95%; /* or any percentage or fixed width like 300px */
+  height: auto; /* keep aspect ratio */
+}
+>>>>>>> fabc0cc0f47e3f7dae1196f5ec31c3f3d3e46e63
