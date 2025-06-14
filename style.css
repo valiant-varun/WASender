@@ -1,0 +1,360 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+/* Global Font */
+* {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* Font Utilities */
+.plus-jakarta-sans {
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.plus-jakarta-navitems {
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Navbar Font Size */
+.custom-nav-font {
+  font-size: 0.9rem;
+}
+
+/* Green Gradient Button */
+.custom-light-green {
+  color: #ffffff;
+  border: none;
+  font-size: 0.8rem;
+  padding: 0.4rem 0.9rem;
+  font-weight: 500;
+  border-radius: 5px;
+  background: linear-gradient(to bottom, #4caf50, #2e8b57);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+}
+
+.custom-light-green:hover {
+  background-color: #76d476; /* This will be overridden by the .scroll-text-button:hover if both classes apply */
+  color: #ffffff;
+}
+
+/* Book Demo Button */
+.custom-book-demo {
+  background-color: #f8f8f8;
+  color: #019f53;
+  font-weight: 600;
+  padding: 0.4rem 0.9rem;
+  margin: 0 0.6rem;
+  box-shadow: 0 4px 8px rgba(123, 123, 123, 0.2);
+  transition: all 0.2s ease-in-out;
+  /* NEW: Base for continuous animation */
+  display: inline-block; /* Ensure it's block or inline-block for transform */
+  transform-origin: center center; /* For consistent scaling/floating */
+  animation: gentleFloat 3s ease-in-out infinite; /* Apply continuous animation here */
+  animation-delay: 1s; /* Start after a small delay on page load */
+}
+
+/* NEW: Hover effect for Book Live Demo */
+.custom-book-demo:hover {
+  transform: translateY(-2px) scale(1.02); /* Slight lift and scale */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  animation: none; /* Stop the gentleFloat animation on hover for cleaner interaction */
+}
+
+/* NEW: Keyframes for the continuous "gentle float" animation */
+@keyframes gentleFloat {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  } /* Moves up 3px */
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Color Utilities */
+.custom-grey {
+  color: #9b9c9c;
+}
+
+.semi-bold {
+  font-weight: 500;
+}
+
+/* Hero Features List */
+.hero-features li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* Custom Checkbox - ORIGINAL STYLES */
+.custom-checkbox {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: #f8f8f8;
+  color: #333; /* Base color for the checkbox box */
+  font-size: 14px;
+  position: relative; /* Crucial for absolute positioning of the checkmark */
+  overflow: hidden; /* To clip the checkmark when it scales/moves if needed */
+}
+
+.custom-checkbox i {
+  font-size: 1rem;
+}
+
+/* Hide default check-circle icon */
+.hero-features i.bi-check-circle-fill {
+  display: none;
+}
+
+/* Margin Utility */
+.margin-4rem {
+  margin-bottom: 5rem;
+}
+
+/* Hero Image Animation */
+.hero-image {
+  max-width: 95%;
+  height: auto;
+  display: block;
+  opacity: 0;
+  transform: translateX(100%);
+  animation: slideInFromRight 1s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+/* Slide in from right animation */
+@keyframes slideInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Hero Title Animation */
+.hero-title {
+  line-height: 1.3;
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: slideInFromLeft 1s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Hero Subtitle */
+.hero-subtitle {
+  min-height: 2em;
+}
+
+/* Blinking Cursor */
+.typed-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background-color: #333;
+  animation: blink 0.7s infinite;
+  vertical-align: middle;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Navbar Brand Bounce Animation */
+.navbar-brand {
+  display: inline-block;
+  position: relative;
+  z-index: 10;
+  animation: bounceAndSettle 1.5s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+@keyframes bounceAndSettle {
+  0% {
+    transform: translateY(-500px);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  25% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  55% {
+    transform: translateY(0);
+  }
+  65% {
+    transform: translateY(-10px);
+  }
+  75% {
+    transform: translateY(0);
+  }
+  80% {
+    transform: translateY(-3px);
+  }
+  90%,
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* --- "Start Free Trial" Scroll Text Button Animation --- */
+/* Your existing .scroll-text-button, .button-text-wrapper, .button-text styles are here. */
+/* IMPORTANT: Adjust padding on .button-text-wrapper to match your desired button size. */
+/* Make sure the .btn base padding is removed or set to 0 if the padding is moved to .button-text-wrapper */
+.scroll-text-button {
+  /* Retaining your existing styles for scroll-text-button */
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 0; /* Ensures padding is controlled by .button-text-wrapper */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 150px; /* Adjust as needed */
+  height: 48px; /* Adjust as needed */
+  /* Add z-index if buttons can overlap other elements during animation */
+  z-index: 2;
+}
+
+.button-text-wrapper {
+  /* Retaining your existing styles for button-text-wrapper */
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease-out;
+  padding: 0.4rem 0.9rem; /* Match your original custom-light-green padding */
+}
+
+.button-text {
+  /* Retaining your existing styles for button-text */
+  display: block;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  line-height: inherit;
+}
+
+.scroll-text-button:hover .button-text-wrapper {
+  /* Retaining your existing hover effect */
+  transform: translateY(-100%);
+}
+
+/* --- Pulse Button Animation (for custom-light-green buttons) --- */
+@keyframes pulseButton {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  } /* Start with original shadow */
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(66, 203, 114, 0.7);
+  } /* Grow and glow */
+  100% {
+    transform: scale(1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  } /* Return to original shadow */
+}
+
+/* Ensure pulse animation is 2s as per JS */
+.btn-success.custom-light-green.pulsing-active {
+  animation: pulseButton 2s ease-in-out forwards; /* Changed from 1s to 2s to match JS */
+  transform-origin: center center; /* Essential for correct scaling */
+}
+
+/* --- Styles for the animated checkmarks --- */
+
+/* --- Styles for the animated checkmarks --- */
+
+/* Corrected: .custom-checkbox already has position: relative; and overflow: hidden; */
+/* Do NOT add color or font-size here, let it inherit from .custom-checkbox i */
+/* --- Styles for the animated checkmarks --- */
+
+/* --- Styles for the animated checkmarks --- */
+
+.animated-check {
+  opacity: 0; /* Start invisible */
+  /* Starting transform adjusted to include centering */
+  transform: translate(-50%, -50%) scale(0.5);
+  /* Corrected: Removed explicit color and font-size here.
+       It will inherit from .custom-checkbox i which you have as font-size: 1rem; and color: #333; */
+  position: absolute; /* Position within the custom-checkbox span */
+  left: 50%; /* Center horizontally */
+  top: 50%; /* Center vertically */
+}
+
+/* Keyframes for the checkmark animation: bounce in and STAY visible */
+@keyframes checkmarkAnimation {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5); /* Start small and invisible */
+  }
+  20% {
+    /* Appears and scales up */
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+  40% {
+    /* Settles */
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    /* Stays visible and at settled size */
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+/* Class to apply the animation (will be added by JavaScript) */
+.animated-check.active {
+  animation: checkmarkAnimation 0.8s ease-out forwards; /* 0.8s duration for each checkmark */
+  /* 'forwards' is crucial to hold the final state (visible) */
+}
+
+/* Add this to ensure the initial state is correct for the icon in the checkmark container */
+.custom-checkbox i {
+  font-size: 1rem; /* As per your existing CSS */
+  color: #333; /* As per your existing CSS, or desired default */
+  /* Important: This ensures the icon itself has a color before animation */
+}
+
+/* --- Rest of your CSS (buttons, hero, etc.) remains unchanged --- */
+/* Your existing @import, global fonts, navbar, button styles, hero image/title/subtitle,
+   blinking cursor, navbar brand, scroll-text-button, pulseButton, and custom-book-demo
+   styles should all remain as they were after the last full CSS block I provided. */
